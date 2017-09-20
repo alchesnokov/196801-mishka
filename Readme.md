@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Чесноков](https://up.htmlacademy.ru/adaptive/12/user/196801).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Фомин](https://up.htmlacademy.ru/adaptive/12/user/44744).
 
 ---
 
