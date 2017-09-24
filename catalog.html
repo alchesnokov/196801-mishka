@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+
+<!--Header Page-->
+<header class="header-page">
+  <nav class="nav-main">
+    <a href="#" class="header-page__logo">
+      <img src="http://placehold.it/86x35" alt="Логотип" class="header-page__logo-img">
+    </a>
+    <button class="nav-main__btn menu-mobile__btn"></button>
+    <button class="nav-main__btn menu-mobile__close"></button>
+    <div class="menu-mobile">
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__item"><a href="" class="menu-mobile__link">Каталог товаров</a></li>
+        <li class="menu-mobile__item"><a href="" class="menu-mobile__link">Вязание на заказ</a></li>
+        <li class="menu-mobile__item"><a href="" class="menu-mobile__link menu-mobile__link--search">Поиск по сайту</a>
+        </li>
+        <li class="menu-mobile__item"><a href="" class="menu-mobile__link menu-mobile__link--cart">Корзина: пока
+          пуста</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="header-page__title">Каталог товаров</h1>
+</header>
+<!--Header Page End-->
+
+<!--Main Content-->
+<main class="main-page">
+
+  <!--Catalog Section-->
+  <section class="catalog">
+    <ul class="catalog__list">
+      <li class="catalog__item"><img src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" class="catalog__img">
+        <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
+        <p class="catalog__text">Рост 30 см, вес 200 г</p>
+        <div class="catalog__price catalog__price--cart">1 200 руб.</div>
+      </li>
+      <li class="catalog__item"><img src="http://placehold.it/260x195" alt="Корзинка для белья" class="catalog__img">
+        <h2 class="catalog__title">Корзинка для белья</h2>
+        <p class="catalog__text">Диаметр 15 см, высота 10 см</p>
+        <div class="catalog__price catalog__price--cart">690 руб.</div>
+      </li>
+      <li class="catalog__item"><img src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" class="catalog__img">
+        <h2 class="catalog__title">Большая корзинка для игрушек</h2>
+        <p class="catalog__text">Диаметр 30 см, высота 30см</p>
+        <div class="catalog__price catalog__price--cart">1 500 руб.</div>
+      </li>
+    </ul>
+  </section>
+  <!--Catalog Section End-->
+
+  <!--Video Section-->
+  <section class="video">
+    <div class="video__item">
+      <h2 class="video__title video__title--camera">Процесс видеопроизводства</h2>
+      <video src="http://placehold.it/260x150" class="video__window video__window--play"></video>
+      <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются
+        наши товары.</p>
+      <button class="btn-main">Сделать заказ</button>
+    </div>
+  </section>
+  <!--Video Section End-->
+
+</main>
+<!--Main Content End-->
+
+<!--Footer Page-->
+<footer class="footer-page">
+  <ul class="footer-page__social social-list">
+    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+  </ul>
+  <div class="footer__copyright copyright">
+    <p class="copyright__text">Разработано</p>
+    <a href="#" class="copyright__logo">
+      <img src="http://placehold.it/27x34" alt="Логотип HTML Academy" class="copyright__logo-img"></a>
+  </div>
+</footer>
+<!--Footer Page End-->
+
+<!--Modal-->
+<div class="modal">
+  <h2 class="modal__title">Добавить в корзину</h2>
+  <p class="modal__text">Выберите размер:</p>
+  <ul class="modal__list">
+    <li class="modal__item">S</li>
+    <li class="modal__item">M</li>
+    <li class="modal__item">L</li>
+  </ul>
+  <button class="btn-main btn-main--add">Добавить</button>
+</div>
+<!--Modal End-->
+
+</body>
+</html>
+
