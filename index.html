@@ -10,7 +10,7 @@
 <header class="header-page">
   <nav class="nav-main">
     <a href="#" class="header-page__logo">
-      <img src="http://placehold.it/86x35" alt="Логотип" class="header-page__logo-img">
+      <img src="http://placehold.it/86x35" alt="Логотип" class="header-page__logo-img"/>
     </a>
     <button class="nav-main__btn menu-mobile__btn"></button>
     <button class="nav-main__btn menu-mobile__close"></button>
@@ -29,7 +29,8 @@
   <section class="categories">
     <h2 class="visually-hidden">Категории товаров</h2>
     <ul class="categories__list">
-      <li class="categories__item"><a href="#" class="categories__link categories__link--interior">Предметы интерьера</a></li>
+      <li class="categories__item"><a href="#" class="categories__link categories__link--interior">Предметы
+        интерьера</a></li>
       <li class="categories__item"><a href="#" class="categories__link categories__link--toy">Детские игрушки</a></li>
     </ul>
   </section>
@@ -60,7 +61,7 @@
           <td class="best-product__field">15 см</td>
         </tr>
       </table>
-      <img src="http://placehold.it/260x315" alt="Вязаная корзинка" class="best-product__img">
+      <img src="http://placehold.it/260x315" alt="Вязаная корзинка" class="best-product__img"/>
       <div class="best-product__price">Цена: 990 руб.</div>
       <button class="btn-main">Заказать</button>
     </div>
@@ -110,7 +111,7 @@
     <ul class="contacts__list">
       <li class="contacts__item">
         <span class="contacts__email">e-mail:</span>
-        <span class="contacts__text">info@mimimishkashop.ru</span>
+        <a href="mailto:info@mimimishkashop.ru" class="contacts__text">info@mimimishkashop.ru</a>
       </li>
       <li class="contacts__item">
         <span class="contacts__address">адрес:</span>
@@ -128,14 +129,14 @@
 <!--Footer Page-->
 <footer class="footer-page">
   <ul class="footer-page__social social-list">
-    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
-    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
-    <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+    <li class="social-list__item"><a href="#" class="social-list__link social-list__link--instagram"></a></li>
+    <li class="social-list__item"><a href="#" class="social-list__link social-list__link--facebook"></a></li>
+    <li class="social-list__item"><a href="#" class="social-list__link social-list__link--twitter"></a></li>
   </ul>
   <div class="footer__copyright copyright">
     <p class="copyright__text">Разработано</p>
     <a href="#" class="copyright__logo">
-      <img src="http://placehold.it/27x34" alt="Логотип HTML Academy" class="copyright__logo-img"></a>
+      <img src="http://placehold.it/27x34" alt="Логотип HTML Academy" class="copyright__logo-img"/></a>
   </div>
 </footer>
 <!--Footer Page End-->
@@ -144,12 +145,15 @@
 <div class="modal">
   <h2 class="modal__title">Добавить в корзину</h2>
   <p class="modal__text">Выберите размер:</p>
-  <ul class="modal__list">
-    <li class="modal__item">S</li>
-    <li class="modal__item">M</li>
-    <li class="modal__item">L</li>
-  </ul>
-  <button class="btn-main btn-main--add">Добавить</button>
+  <form action="https://echo.htmlacademy.ru" method="post" target="_blank" class="modal__form">
+    <input type="radio" class="modal__radio" id="sizeS" name="Размер" value="S">
+    <label for="sizeS" class="modal__label">S</label>
+    <input type="radio" class="modal__radio" id="sizeM" name="Размер" value="M">
+    <label for="sizeM" class="modal__label">M</label>
+    <input type="radio" class="modal__radio" id="sizeL" name="Размер" value="L">
+    <label for="sizeL" class="modal__label">L</label>
+    <button class="btn-main btn-main--add">Добавить</button>
+  </form>
 </div>
 <!--Modal End-->
 
