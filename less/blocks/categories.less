@@ -6,7 +6,6 @@
 
 .categories__item {
   background-color: @color-main;
-  padding: 30px 0;
 }
 
 .categories__item--darken {
@@ -19,15 +18,14 @@
   line-height: 24px;
   text-decoration: none;
   color: @color-white;
+  padding: 30px 0;
+  display: block;
 }
 
-//.categories__link--interior {
-//  background-image: url("../img/icon-interior.svg");
-//  display: block;
-//  width: 41px;
-//  height: 62px;
-//}
-//
-//.categories__link--toy {
-//  background-image: url("../img/icon-toy.svg");
-//}
+.categories__link--interior {
+  background: url("../img/icon-interior.svg") no-repeat right;
+}
+
+.categories__link--toy {
+  background: url("../img/icon-toy.svg") no-repeat right;;
+}
