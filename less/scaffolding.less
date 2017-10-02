@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/opensansbold.woff2") format("woff2");
+  src: url("../fonts/opensansbold.woff") format("woff");
+}
+
+body {
+  font-family: "OpenSansRegular", sans-serif;
+  font-size: 15px;
+  min-width: 320px;
+  color: @color-text;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

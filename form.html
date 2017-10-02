@@ -2,25 +2,27 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!--Header Page-->
-<header class="header-page">
+<header class="header-page header-page--no-img">
   <nav class="nav-main">
-    <a href="#" class="header-page__logo">
-      <img src="http://placehold.it/86x35" alt="Логотип" class="header-page__logo-img"/>
+    <a href="index.html" class="header-page__logo">
+      <img src="img/logo-mobile.svg" alt="Логотип" class="header-page__logo-img"/>
     </a>
     <button class="nav-main__btn menu-mobile__btn"></button>
     <button class="nav-main__btn menu-mobile__close"></button>
     <div class="menu-mobile">
       <ul class="menu-mobile__list">
-        <li class="menu-mobile__item"><a href="" class="menu-mobile__link">Каталог товаров</a></li>
-        <li class="menu-mobile__item"><a href="" class="menu-mobile__link">Вязание на заказ</a></li>
-        <li class="menu-mobile__item"><a href="" class="menu-mobile__link menu-mobile__link--search">Поиск по сайту</a>
+        <li class="menu-mobile__item"><a href="catalog.html" class="menu-mobile__link">Каталог товаров</a></li>
+        <li class="menu-mobile__item"><a href="form.html" class="menu-mobile__link">Вязание на заказ</a></li>
+        <li class="menu-mobile__item"><a href="#" class="menu-mobile__link menu-mobile__link--search">Поиск по сайту</a>
         </li>
-        <li class="menu-mobile__item"><a href="" class="menu-mobile__link menu-mobile__link--cart">Корзина: пока
+        <li class="menu-mobile__item"><a href="#" class="menu-mobile__link menu-mobile__link--cart">Корзина: пока
           пуста</a></li>
       </ul>
     </div>
@@ -89,7 +91,7 @@
       <fieldset class="order__wrapper">
         <legend class="order__title">Доп</legend>
         <textarea placeholder="Опишите все ваши пожелания к заказу" name="Комментарий"></textarea>
-        <small>*Поля обязательны для заполнения</small>
+        <small class="order__text order__text--small">*Поля обязательны для заполнения</small>
       </fieldset>
 
       <button class="btn-main">Отправить заказ</button>
@@ -111,7 +113,7 @@
   <div class="footer__copyright copyright">
     <p class="copyright__text">Разработано</p>
     <a href="#" class="copyright__logo">
-      <img src="http://placehold.it/27x34" alt="Логотип HTML Academy" class="copyright__logo-img"/></a>
+      <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" class="copyright__logo-img"/></a>
   </div>
 </footer>
 <!--Footer Page End-->
