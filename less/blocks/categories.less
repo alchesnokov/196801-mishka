@@ -6,6 +6,7 @@
 
 .categories__item {
   background-color: @color-main;
+  padding: 0 30px;
 }
 
 .categories__item--darken {
@@ -28,4 +29,14 @@
 
 .categories__link--toy {
   background: url("../img/icon-toy.svg") no-repeat right;
+}
+
+@media (min-width: @tablet-width) {
+  .categories__list {
+    display: flex;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
 }

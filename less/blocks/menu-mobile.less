@@ -1,5 +1,8 @@
 .menu-mobile {
   display: none;
+  position: absolute;
+  width: 100%;
+  background-color: @color-white;
 }
 
 .menu-mobile__list {
@@ -9,7 +12,8 @@
 }
 
 .menu-mobile__item {
-  padding: 31px 46px;
+  padding: 30px;
+  border-top: 1px solid @color-border;
 }
 
 .menu-mobile__link {
@@ -18,6 +22,7 @@
   line-height: 24px;
   text-decoration: none;
   color: @color-black;
+  padding-left: 46px;
 }
 
 .menu-mobile__btn {
@@ -36,4 +41,19 @@
   height: 20px;
   background-color: transparent;
   border: none;
+}
+
+.menu-mobile__link--search {
+  background: url("../img/icon-search.svg") no-repeat left;
+}
+
+.menu-mobile__link--cart {
+  background: url("../img/icon-cart.svg") no-repeat left;
+}
+
+@media (min-width: @tablet-width) {
+  .menu-mobile__btn,
+  .menu-mobile__close {
+    display: none;
+  }
 }

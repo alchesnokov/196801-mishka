@@ -1,5 +1,7 @@
 .best-product {
-  padding: 34px 0;
+  padding: 34px 30px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .best-product__title {
@@ -47,4 +49,10 @@
   line-height: 20px;
   color: @color-text;
   margin-bottom: 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .best-product {
+    width: 768px;
+  }
 }

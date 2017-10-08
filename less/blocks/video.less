@@ -1,3 +1,8 @@
+.video {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .video__title {
   font-family: "OpenSansBold", sans-serif;
   font-size: 17px;
@@ -5,6 +10,10 @@
   margin: 30px 34px;
   padding-left: 62px;
   position: relative;
+}
+
+.video__window {
+  width: 100%;
 }
 
 .video__info {
@@ -24,4 +33,10 @@
 
 .video__window--play {
   background: url("../img/icon-play.svg") no-repeat center;
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    width: 768px;
+  }
 }

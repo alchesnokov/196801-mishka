@@ -1,6 +1,14 @@
 .contacts {
   padding-top: 44px;
   padding-bottom: 39px;
+  width: 320px;
+  margin: 0 auto;
+
+  .btn-main {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+  }
 }
 
 .contacts__title {
@@ -9,6 +17,14 @@
   line-height: 30px;
   color: @color-black;
   margin: 0;
+  padding: 0 30px;
+}
+
+.contacts__list {
+  margin-top: 42px;
+  margin-bottom: 0;
+  padding: 0 30px;
+  list-style: none;
 }
 
 .contacts__item {
@@ -27,17 +43,16 @@
   padding-bottom: 3px;
 }
 
-.contacts__list {
-  margin-top: 42px;
-  margin-bottom: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .contacts__map {
   background: url("../img/map-mobile@1x.jpg") no-repeat;
   height: 457px;
   width: 100%;
   margin-top: 42px;
   margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 768px;
+  }
 }

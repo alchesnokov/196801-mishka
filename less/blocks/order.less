@@ -1,6 +1,7 @@
 .order {
-  padding-top: 29px;
-  padding-bottom: 55px;
+  padding: 29px 30px 55px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .order__text {
@@ -37,4 +38,10 @@
   font-size: 17px;
   line-height: 18px;
   color: @color-black;
+}
+
+@media (min-width: @tablet-width) {
+  .order {
+    width: 768px;
+  }
 }

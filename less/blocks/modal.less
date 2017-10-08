@@ -1,5 +1,8 @@
 .modal {
-  padding: 36px 30px 46px 30px;
+  padding: 36px 30px 46px;
+  width: 320px;
+  margin: 0 auto;
+  border: 1px solid @color-border-modal;
 }
 
 .modal__title {
@@ -26,4 +29,10 @@
   font-family: "OpenSansBold", sans-serif;
   font-size: 17px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 566px;
+  }
 }

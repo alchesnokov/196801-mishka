@@ -1,4 +1,29 @@
 .nav-main {
   background-color: @color-white;
-  height: 79px;
+  min-height: 80px;
+  border-bottom: 1px solid @color-border;
+}
+
+.nav-main__wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  position: relative;
+}
+
+.nav-main__btn {
+  position: absolute;
+  right: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .nav-main__wrapper {
+    height: 88px;
+    padding: 0 50px;
+  }
+
+  .nav-main__btn {
+    display: none;
+  }
 }
