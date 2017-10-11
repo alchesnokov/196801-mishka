@@ -54,10 +54,35 @@
     width: 768px;
     padding: 0 50px;
   }
+
+  .catalog__item {
+    display: flex;
+  }
+
+  .catalog__link,
+  .catalog__info {
+    width: 50%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog {
-    width: 1250px;
+    width: 1150px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    display: block;
+    width: 315px;
+  }
+
+  .catalog__link,
+  .catalog__info {
+    width: 100%;
   }
 }
