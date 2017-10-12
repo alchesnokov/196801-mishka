@@ -3,6 +3,8 @@
   padding-bottom: 39px;
   width: 320px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
   .btn-main {
     display: block;
@@ -21,7 +23,7 @@
 }
 
 .contacts__list {
-  margin-top: 42px;
+  margin-top: 40px;
   margin-bottom: 0;
   padding: 0 30px;
   list-style: none;
@@ -44,7 +46,7 @@
 }
 
 .contacts__map {
-  background: url("../img/map-mobile@1x.jpg") no-repeat;
+  background: url("../img/map-mobile@1x.jpg");
   height: 457px;
   width: 100%;
   margin-top: 42px;
@@ -56,30 +58,70 @@
     width: 768px;
     display: flex;
     flex-wrap: wrap;
+    padding: 46px 0 57px 0;
   }
 
   .contacts__list {
     display: flex;
+    padding: 0 50px;
   }
 
   .contacts__item {
     width: 50%;
+    margin-bottom: 0;
   }
 
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
+    width: 100%;
+    padding: 15px 0 15px 50px;
+    margin-right: 50px;
+  }
+
+  .contacts__title--flag {
+    background: url("../../img/icon-flag.svg") no-repeat right;
+  }
+
+  .contacts__map {
+    margin-top: 60px;
+    margin-bottom: 55px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
     width: 1250px;
-    padding: 0 100px;
+    padding: 70px 100px 105px 100px;
+    flex-direction: row;
+  }
+
+  .contacts__wrapper {
+    //padding-left: 175px;
+    width: 50%;
+  }
+  .contacts__map {
+    width: 50%;
+    margin: 0;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+    padding-left: 175px;
+  }
+
+  .contacts__item {
+    width: 100%;
+    margin-bottom: 40px;
   }
 
   .contacts__title {
     font-size: 53px;
     line-height: 57px;
+    padding-left: 175px;
+  }
+
+  .contacts__title--flag {
+    background-position: 62px;
   }
 }
