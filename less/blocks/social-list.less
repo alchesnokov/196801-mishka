@@ -1,3 +1,16 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 142px;
+}
+
+.social-list__link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
 .social-list__link--instagram {
   background: url("../img/icon-insta.svg") no-repeat center;
 }
@@ -8,4 +21,10 @@
 
 .social-list__link--twitter {
   background: url("../img/icon-twitter.svg") no-repeat center;
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    padding: 0;
+  }
 }
