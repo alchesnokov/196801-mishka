@@ -6,12 +6,7 @@
 
 .best-product__item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.best-product__wrapper {
-  width: 50%;
+  flex-direction: column;
 }
 
 .best-product__title {
@@ -65,6 +60,17 @@
   .best-product {
     width: 768px;
     padding: 34px 50px;
+  }
+
+  .best-product__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .best-product__wrapper {
+    width: 50%;
   }
 
   .best-product__title {
