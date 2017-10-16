@@ -16,13 +16,34 @@
   line-height: 16px;
 }
 
-.order__wrapper {
+.order__item {
   margin: 0;
   padding: 30px 0;
   border-top: 1px solid @color-main;
   border-bottom: none;
   border-left: none;
   border-right: none;
+}
+
+.order__item--type {
+
+  .order__label {
+    padding-bottom: 25px;
+  }
+}
+
+.order__item--color {
+
+  .order__label {
+    padding-bottom: 45px;
+  }
+}
+
+.order__item--name {
+
+  .order__label {
+    padding-top: 22px;
+  }
 }
 
 .order__title {
@@ -43,12 +64,28 @@
 
 .order__input,
 .order__textarea {
+  font-family: "OpenSansRegular", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
   width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid @color-black;
+}
+
+.order__textarea {
+  border: 2px solid @color-black;
+  padding: 17px;
 }
 
 .order__radio,
 .order__checkbox {
   display: none;
+}
+
+.order__footer {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,10 +94,36 @@
     padding: 29px 50px 55px;
   }
 
-  .order__wrapper {
+  .order__text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__item {
     padding: 30px 0 30px 167px;
     position: relative;
     border-top: none;
+  }
+
+  .order__item--type {
+
+    .order__label {
+      padding-left: 80px
+    }
+  }
+
+  .order__color {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .order__item--color {
+
+    .order__label {
+      padding-left: 80px;
+      padding-bottom: 56px;
+      width: 250px;
+    }
   }
 
   .order__title {
@@ -70,6 +133,25 @@
 
   .order__label {
     display: flex;
+    align-items: baseline;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .order__input,
+  .order__textarea {
+    font-size: 19px;
+    padding: 17px;
+  }
+
+  .order__text--small {
+    margin-bottom: 0;
+  }
+
+  .order__footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -82,11 +164,15 @@
     padding-left: 175px;
   }
 
-  .order__wrapper {
+  .order__item {
     padding: 30px 0 30px 175px;
   }
 
   .order__title {
     left: 62px;
+  }
+
+  .order__footer {
+    padding-left: 175px;
   }
 }

@@ -7,6 +7,7 @@
 .video__item {
   display: flex;
   flex-direction: column;
+  border: 1px solid @color-border;
 }
 
 .video__title {
@@ -19,11 +20,14 @@
 }
 
 .video__window {
-  width: 100%;
+  width: 260px;
+  height: 150px;
 }
 
 .video__info {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .video__text {
@@ -46,6 +50,26 @@
     width: @tablet-width;
     padding: 53px 50px 63px;
   }
+
+  .video__window {
+    width: 668px;
+    height: 455px;
+    order: 1;
+  }
+
+  .video__title {
+    order: 2;
+    font-size: 20px;
+  }
+
+  .video__info {
+    order: 3;
+  }
+
+  .video__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -55,6 +79,25 @@
   }
 
   .video__item {
-    flex-direction: row;
+    height: 455px;
+    flex-wrap: wrap;
+  }
+
+  .video__title {
+    width: 185px;
+    padding-top: 95px;
+    padding-left: 78px;
+  }
+
+  .video__info {
+    width: 350px;
+    padding-bottom: 59px;
+    padding-left: 78px;
+    padding-top: 0;
+  }
+
+  .video__window {
+    width: 682px;
+    height: 455px;
   }
 }
