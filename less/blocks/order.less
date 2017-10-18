@@ -1,5 +1,5 @@
 .order {
-  padding: 29px 30px 55px;
+  padding: 22px 30px 55px;
   width: 320px;
   margin: 0 auto;
 }
@@ -8,17 +8,18 @@
   font-size: 13px;
   line-height: 24px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .order__text--small {
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 31px;
 }
 
 .order__item {
   margin: 0;
-  padding: 30px 0;
+  padding: 33px 0 19px;
   border-top: 1px solid @color-main;
   border-bottom: none;
   border-left: none;
@@ -27,20 +28,39 @@
 
 .order__item--type {
   .order__label {
+    position: relative;
     padding-bottom: 25px;
+    padding-left: 63px;
   }
 }
 
 .order__item--color {
+  padding-top: 36px;
+  padding-bottom: 0;
   .order__label {
-    padding-bottom: 45px;
+    position: relative;
+    padding-bottom: 44px;
+    padding-left: 63px;
   }
 }
 
 .order__item--name {
+  padding-top: 6px;
+  padding-bottom: 33px;
   .order__label {
-    padding-top: 22px;
+    padding-top: 21px;
   }
+}
+
+.order__item--tel,
+.order__item--email {
+  padding-top: 7px;
+  padding-bottom: 32px;
+}
+
+.order__item--textarea {
+  padding-top: 25px;
+  padding-bottom: 12px;
 }
 
 .order__title {
@@ -65,19 +85,66 @@
   font-size: 17px;
   line-height: 18px;
   width: 100%;
-  padding: 17px 0;
+  padding: 16px 0;
   border: none;
   border-bottom: 2px solid @color-black;
 }
 
 .order__textarea {
   border: 2px solid @color-black;
-  padding: 17px;
+  padding: 16px;
 }
 
 .order__radio,
 .order__checkbox {
   display: none;
+}
+
+.order__radio {
+  & + .order__label::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #444;
+    border-radius: 50%;
+  }
+
+  &:checked + .order__label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background: #63d1bb;
+    border-radius: 50%;
+  }
+}
+
+.order__checkbox {
+  & + .order__label::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 36px;
+    height: 35px;
+    border: 2px solid #444;
+  }
+
+  &:checked + .order__label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 8px;
+    width: 22px;
+    height: 17px;
+    background: url(../img/icon-tick.svg) no-repeat 50% 50%;
+    background-size: 22px 16px;
+  }
 }
 
 .order__footer {
@@ -88,7 +155,7 @@
 @media (min-width: @tablet-width) {
   .order {
     width: @tablet-width;
-    padding: 29px 50px 55px;
+    padding: 63px 50px 51px;
   }
 
   .order__text {
@@ -103,8 +170,14 @@
   }
 
   .order__item--type {
+    padding-top: 49px;
+    padding-bottom: 11px;
     .order__label {
       padding-left: 80px;
+      padding-bottom: 58px;
+    }
+    .order__title {
+      top: 51px;
     }
   }
 
@@ -114,16 +187,119 @@
   }
 
   .order__item--color {
+    padding-top: 66px;
+    padding-bottom: 11px;
+    width: 104%;
+    background-color: @color-bg-secondary;
     .order__label {
       padding-left: 80px;
-      padding-bottom: 56px;
-      width: 250px;
+      padding-bottom: 58px;
+      width: 262px;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -23px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+  }
+
+  .order__input,
+  .order__textarea {
+    font-size: 19px;
+    padding: 17px;
+  }
+
+  .order__item--name {
+    padding-bottom: 48px;
+    .order__label {
+      padding-top: 15px;
+    }
+
+    .order__input {
+      padding: 16px 17px 17px 18px;
+      margin-left: 25px;
+    }
+  }
+
+  .order__item--tel {
+    padding-top: 43px;
+    padding-bottom: 0;
+    background-color: @color-bg-secondary;
+    .order__input {
+      background-color: @color-bg-secondary;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+  }
+
+  .order__item--email {
+    padding-top: 13px;
+    padding-bottom: 49px;
+    background-color: @color-bg-secondary;
+    .order__title {
+      top: 38px;
+    }
+    .order__input {
+      background-color: @color-bg-secondary;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background-color: @color-bg-secondary;
+    }
+  }
+
+  .order__item--textarea {
+    padding-top: 47px;
+    padding-bottom: 49px;
   }
 
   .order__title {
     position: absolute;
     left: 0;
+    top: 67px;
   }
 
   .order__label {
@@ -133,10 +309,37 @@
     line-height: 18px;
   }
 
-  .order__input,
-  .order__textarea {
-    font-size: 19px;
-    padding: 17px;
+  .order__radio {
+    & + .order__label::before {
+      top: -15px;
+      left: 0;
+      width: 47px;
+      height: 47px;
+    }
+
+    &:checked + .order__label::after {
+      top: 0;
+      left: 15px;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .order__checkbox {
+    & + .order__label::before {
+      top: -15px;
+      left: 0;
+      width: 50px;
+      height: 48px;
+    }
+
+    &:checked + .order__label::after {
+      top: 1px;
+      left: 11px;
+      width: 33px;
+      height: 22px;
+      background-size: 33px 22px;
+    }
   }
 
   .order__text--small {
@@ -147,24 +350,47 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+
+    .btn-main {
+      min-width: 229px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .order {
     width: @desktop-width;
+    padding-top: 106px;
   }
 
   .order__text {
     padding-left: 175px;
+    width: 85%;
   }
 
   .order__item {
-    padding: 30px 0 30px 175px;
+    padding-left: 175px;
   }
 
   .order__title {
     left: 62px;
+  }
+
+  .order__item--color {
+    &::after {
+      right: -8px;
+    }
+  }
+
+  .order__item--name,
+  .order__item--tel,
+  .order__item--email {
+    padding-right: 175px;
+  }
+
+  .order__item--textarea {
+    padding-bottom: 43px;
+    padding-right: 175px;
   }
 
   .order__footer {
