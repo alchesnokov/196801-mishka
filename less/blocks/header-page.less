@@ -33,6 +33,12 @@
 @media (min-width: @tablet-width) {
   .header-page {
     width: @tablet-width;
+
+    .header-page__title--no-img {
+      background-image: none;
+      min-height: 235px;
+      padding-top: 92px;
+    }
   }
 
   .header-page__logo {
@@ -53,16 +59,16 @@
       background-image: url("../img/hero-tablet@2x.jpg");
     }
   }
-
-  .header-page__title--no-img {
-    min-height: 235px;
-    padding-top: 92px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .header-page {
     width: @desktop-width;
+
+    .header-page__title--no-img {
+      background-image: none;
+      min-height: 270px;
+    }
   }
 
   .header-page__title {
@@ -74,9 +80,5 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
       background-image: url("../img/hero-desktop@2x.jpg");
     }
-  }
-
-  .header-page__title--no-img {
-    min-height: 270px;
   }
 }

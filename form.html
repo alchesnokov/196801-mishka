@@ -21,7 +21,11 @@
     <ul class="nav-main__list">
       <li class="nav-main__item nav-main__item--logo">
         <a href="index.html" class="nav-main__link">
-          <img src="img/logo-mobile.svg" alt="Логотип" class="nav-main__img"/>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип" class="nav-main__img"/>
+          </picture>
         </a>
       </li>
       <li class="nav-main__item nav-main__item--catalog"><a href="catalog.html" class="nav-main__link">Каталог
@@ -134,7 +138,7 @@
 <!--Footer Page-->
 <footer class="footer-page">
   <a href="index.html" class="footer-page__logo">
-    <img src="img/logo-mobile.svg" width="102" height="34" alt="Логотип" class="footer-page__logo-img">
+    <img src="img/logo-footer.svg" width="102" height="34" alt="Логотип" class="footer-page__logo-img">
   </a>
   <ul class="footer-page__social social-list">
     <li class="social-list__item"><a href="#" class="social-list__link social-list__link--instagram"></a></li>
