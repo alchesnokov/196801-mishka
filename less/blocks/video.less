@@ -95,11 +95,11 @@
   .video {
     width: @desktop-width;
     padding: 57px 50px 105px;
+    position: relative;
   }
 
   .video__item {
-    height: 455px;
-    flex-wrap: wrap;
+    padding-left: 682px;
   }
 
   .video__title {
@@ -125,6 +125,8 @@
     height: 455px;
     background: url("../img/video-desktop@1x.jpg") no-repeat;
     background-size: 682px;
+    position: absolute;
+    left: 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
