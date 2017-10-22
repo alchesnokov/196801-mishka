@@ -79,6 +79,7 @@
   line-height: 18px;
   color: @color-black;
   display: block;
+  cursor: pointer;
 }
 
 .order__input,
@@ -90,6 +91,8 @@
   padding: 16px 0;
   border: none;
   border-bottom: 2px solid @color-black;
+  transition: @transition;
+  outline: none;
 }
 
 .order__textarea {
@@ -112,6 +115,7 @@
     height: 35px;
     border: 2px solid @color-radio;
     border-radius: 50%;
+    transition: @transition;
   }
 
   &:checked + .order__label::after {
@@ -135,6 +139,7 @@
     width: 36px;
     height: 35px;
     border: 2px solid @color-checkbox;
+    transition: @transition;
   }
 
   &:checked + .order__label::after {

@@ -4,6 +4,8 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .social-list__link {
@@ -12,23 +14,17 @@
   height: 30px;
 }
 
-.social-list__link--instagram {
-  background: url("../img/icon-insta.svg") no-repeat center;
-}
-
-.social-list__link--facebook {
-  background: url("../img/icon-fb.svg") no-repeat center;
-}
-
-.social-list__link--twitter {
-  background: url("../img/icon-twitter.svg") no-repeat center;
+.social-list__instagram-icon,
+.social-list__facebook-icon,
+.social-list__twitter-icon {
+  transition: @transition;
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
     padding: 0;
     width: 148px;
-    margin-left: 74px;
+    margin-left: 87px;
     border-bottom: none;
   }
 }
