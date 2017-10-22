@@ -40,7 +40,7 @@
   font-size: 17px;
   line-height: 16px;
   position: relative;
-  width: 115px;
+  width: 80px;
   height: 52px;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 110px;
+    width: 75px;
     height: 52px;
     border: 2px solid @color-border;
     transition: @transition;
@@ -73,5 +73,15 @@
   .modal {
     width: 566px;
     padding: 50px 106px 40px;
+  }
+
+  .modal__label {
+    width: 115px;
+  }
+
+  .modal__radio {
+    & + .modal__label::before {
+      width: 110px;
+    }
   }
 }
