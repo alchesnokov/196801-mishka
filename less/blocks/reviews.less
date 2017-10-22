@@ -44,15 +44,13 @@
 .reviews__prev,
 .reviews__next {
   display: block;
-  background: url("../img/icon-left-arrow.svg") no-repeat center;
   background-color: transparent;
   border: 1px solid @color-border;
   width: 50%;
   height: 50px;
-}
-
-.reviews__next {
-  background: url("../img/icon-right-arrow.svg") no-repeat center;
+  cursor: pointer;
+  outline: none;
+  transition: @transition;
 }
 
 @media (min-width: @tablet-width) {
