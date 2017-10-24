@@ -24,10 +24,18 @@
   height: 150px;
   background: url("../img/video-mobile@1x.jpg") no-repeat;
   background-size: 260px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
   }
+}
+
+.video__play-icon {
+  transition: @transition;
+  cursor: pointer;
 }
 
 .video__info {
@@ -46,10 +54,6 @@
 .video__title--camera {
   background: url("../img/icon-video.svg") no-repeat 33px 24px;
 }
-
-//.video__window--play {
-//  background: url("../img/icon-play.svg") no-repeat center;
-//}
 
 @media (min-width: @tablet-width) {
   .video {
@@ -100,7 +104,7 @@
 
   .video__item {
     padding-left: 50px;
-    margin-left: 632px;
+    margin-left: 646px;
     transition: @transition;
   }
 
@@ -128,7 +132,7 @@
     background: url("../img/video-desktop@1x.jpg") no-repeat;
     background-size: 682px;
     position: absolute;
-    left: 0;
+    left: 50px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
