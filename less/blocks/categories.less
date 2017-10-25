@@ -41,13 +41,13 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 815px;
+      bottom: -184px;
       display: flex;
       width: 100%;
-      height: 15px;
+      height: 34px;
       background-image: url(../img/bg-zigzag-fill.svg);
       background-repeat: repeat-x;
-      background-position: -5px top;
+      background-position: -4px top;
       background-size: auto 23px;
       z-index: 2;
     }
@@ -60,12 +60,17 @@
   .categories__link {
     font-size: 20px;
     line-height: 30px;
-    padding: 28px 37px 28px 36px;
+    padding: 28px 37px 36px 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .categories__list {
     width: @desktop-width;
+
+    &::after {
+      bottom: -371px;
+      background-size: auto;
+    }
   }
 }
