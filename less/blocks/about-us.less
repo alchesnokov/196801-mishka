@@ -29,46 +29,46 @@
   position: relative;
 }
 
-.about-us__item--flower::before {
-  content: url("../img/icon-feature-flower.svg");
+.about-us__flower-icon {
   position: absolute;
   top: 1px;
   left: 8px;
+  fill: @color-main;
 }
 
-.about-us__item--money::before {
-  content: url("../img/icon-feature-money.svg");
+.about-us__money-icon {
   position: absolute;
   top: 2px;
   left: 0;
+  fill: @color-main;
 }
 
-.about-us__item--heart::before {
-  content: url("../img/icon-feature-heart.svg");
+.about-us__heart-icon {
   position: absolute;
   top: 7px;
   left: 7px;
+  fill: @color-main;
 }
 
-.about-us__item--ball::before {
-  content: url("../img/icon-feature-ball.svg");
+.about-us__ball-icon {
   position: absolute;
   top: 5px;
   left: 3px;
+  fill: @color-main;
 }
 
-.about-us__item--rocket::before {
-  content: url("../img/icon-feature-rocket.svg");
+.about-us__rocket-icon {
   position: absolute;
   top: 5px;
   left: -6px;
+  fill: @color-main;
 }
 
-.about-us__item--gift::before {
-  content: url("../img/icon-feature-gift.svg");
+.about-us__gift-icon {
   position: absolute;
   top: 4px;
   left: 3px;
+  fill: @color-main;
 }
 
 @media (min-width: @tablet-width) {
@@ -99,7 +99,7 @@
   .about-us__item--flower {
     order: 1;
 
-    &::before {
+    .about-us__flower-icon {
       top: 19px;
       left: 9px;
     }
@@ -108,7 +108,7 @@
   .about-us__item--money {
     order: 3;
 
-    &::before {
+    .about-us__money-icon {
       top: 20px;
     }
   }
@@ -116,7 +116,7 @@
   .about-us__item--heart {
     order: 5;
 
-    &::before {
+    .about-us__heart-icon {
       top: 24px;
       left: 8px;
     }
@@ -125,7 +125,7 @@
   .about-us__item--ball {
     order: 2;
 
-    &::before {
+    .about-us__ball-icon {
       top: 22px;
     }
   }
@@ -133,7 +133,7 @@
   .about-us__item--rocket {
     order: 4;
 
-    &::before {
+    .about-us__rocket-icon {
       top: 23px;
     }
   }
@@ -141,7 +141,7 @@
   .about-us__item--gift {
     order: 6;
 
-    &::before {
+    .about-us__gift-icon {
       top: 21px;
     }
   }

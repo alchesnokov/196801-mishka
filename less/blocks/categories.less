@@ -7,6 +7,7 @@
 .categories__item {
   background-color: @color-main;
   transition: @transition;
+  position: relative;
 }
 
 .categories__item--toy {
@@ -24,34 +25,27 @@
   transition: @transition;
 }
 
-.categories__link--interior {
-  background: url("../img/icon-interior.svg") no-repeat right;
+.categories__interior-icon {
+  position: absolute;
+  right: 37px;
+  bottom: 19px;
+  fill: #3bb09d;
+  transition: @transition;
 }
 
-.categories__link--toy {
-  background: url("../img/icon-toy.svg") no-repeat right;
+.categories__toy-icon {
+  position: absolute;
+  right: 27px;
+  bottom: 23px;
+  fill: #35a999;
+  transition: @transition;
 }
 
 @media (min-width: @tablet-width) {
   .categories__list {
     display: flex;
     padding: 0 50px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -184px;
-      display: flex;
-      width: 100%;
-      height: 34px;
-      background-image: url(../img/bg-zigzag-fill.svg);
-      background-repeat: repeat-x;
-      background-position: -4px top;
-      background-size: auto 23px;
-      z-index: 2;
     }
-  }
 
   .categories__item {
     width: 50%;
@@ -62,15 +56,20 @@
     line-height: 30px;
     padding: 28px 37px 36px 36px;
   }
+
+  .categories__interior-icon {
+    right: 36px;
+    bottom: 31px;
+  }
+
+  .categories__toy-icon {
+    right: 34px;
+    bottom: 32px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .categories__list {
     width: @desktop-width;
-
-    &::after {
-      bottom: -371px;
-      background-size: auto;
-    }
   }
 }
