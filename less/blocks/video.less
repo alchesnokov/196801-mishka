@@ -1,7 +1,7 @@
 .video {
   width: 320px;
   margin: 0 auto;
-  padding: 30px 30px 58px;
+  padding: 34px 30px 59px;
 }
 
 .video__item {
@@ -21,6 +21,8 @@
 
 .video__camera-icon {
   position: absolute;
+  left: 33px;
+  top: 23px
 }
 
 .video__window {
@@ -58,7 +60,7 @@
 @media (min-width: @tablet-width) {
   .video {
     width: @tablet-width;
-    padding: 43px 50px 79px;
+    padding: 45px 50px 79px;
   }
 
   .video__window {
@@ -88,6 +90,11 @@
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 36px;
+  }
+
+  .video__camera-icon {
+    left: 41px;
+    top: 32px;
   }
 }
 
@@ -133,5 +140,10 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
     }
+  }
+
+  .video__play-icon {
+    left: 65px;
+    top: 42px;
   }
 }
