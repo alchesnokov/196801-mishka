@@ -38,6 +38,7 @@
       background-image: none;
       min-height: 235px;
       padding-top: 92px;
+      position: relative;
     }
   }
 
@@ -58,6 +59,18 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
     }
+  }
+
+  .header-page__title--no-img::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 23px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: auto 23px;
   }
 }
 
@@ -80,5 +93,10 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
+  }
+
+  .header-page__title--no-img::before {
+    height: 34px;
+    background-size: auto;
   }
 }

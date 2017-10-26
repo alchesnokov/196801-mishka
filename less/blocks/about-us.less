@@ -1,7 +1,20 @@
 .about-us {
-  padding: 42px 30px 31px;
+  padding: 34px 30px 31px;
   width: 320px;
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 23px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+  }
 }
 
 .about-us__title {
@@ -75,6 +88,10 @@
   .about-us {
     width: @tablet-width;
     padding: 63px 50px 45px;
+
+    &::before {
+      background-size: auto 15px
+    }
   }
 
   .about-us__title {
@@ -150,7 +167,11 @@
 @media (min-width: @desktop-width) {
   .about-us {
     width: @desktop-width;
-    padding: 77px 0 31px 225px;
+    padding: 81px 0 31px 225px;
+
+    &::before {
+      background-size: auto;
+    }
   }
 
   .about-us__item {

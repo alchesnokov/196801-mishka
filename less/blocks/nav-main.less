@@ -26,6 +26,7 @@
   padding: 30px;
   border-top: 1px solid @color-border;
   position: relative;
+  z-index: 10;
 }
 
 @media (max-width: 767px) {
@@ -60,6 +61,10 @@
     .nav-main__item:not(.nav-main__item--new, .nav-main__item--sale, .nav-main__item--delivery) {
       display: block;
     }
+  }
+
+  .nav-main__item--cart {
+    background-color: @color-white;
   }
 }
 
