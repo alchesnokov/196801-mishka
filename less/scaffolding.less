@@ -1,13 +1,13 @@
 @font-face {
   font-family: "OpenSansRegular";
-  src: url("../fonts/opensans.woff2") format("woff2");
-  src: url("../fonts/opensans.woff") format("woff");
+  src: url("../fonts/opensans.woff"), url("../fonts/opensans.woff2");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "OpenSansBold";
-  src: url("../fonts/opensansbold.woff2") format("woff2");
-  src: url("../fonts/opensansbold.woff") format("woff");
+  src: url("../fonts/opensansbold.woff"), url("../fonts/opensansbold.woff2");
+  font-weight: bold;
 }
 
 * {
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "OpenSansRegular", sans-serif;
+  font-family: "OpenSansRegular", "Arial", sans-serif;
   font-size: 15px;
   min-width: 320px;
   color: @color-text;

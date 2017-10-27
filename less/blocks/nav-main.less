@@ -158,6 +158,16 @@
   .nav-main__list {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid #dfdfdf;
+      top: 88px;
+      z-index: 10;
+    }
   }
 
   .nav-main__item {
@@ -175,7 +185,7 @@
     position: static;
     display: block;
     order: 1;
-    padding: 22px 49px 16px;
+    padding: 22px 49px 15px;
     transition: @transition;
   }
 
@@ -231,6 +241,7 @@
     padding-right: 36px;
     padding-top: 30px;
     font-size: 17px;
+    border-right: 1px solid @color-border;
   }
 
   .nav-main__item--order {
@@ -243,7 +254,7 @@
   .nav-main__logo {
     order: 1;
     width: auto;
-    padding: 8px 24px 3px;
+    padding: 8px 24px 2px;
   }
 
   .nav-main__img {

@@ -4,8 +4,8 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 8px;
+  margin-top: 1px;
 }
 
 .social-list__link {
@@ -15,17 +15,27 @@
   font-size: 0;
 }
 
-.social-list__instagram-icon,
-.social-list__facebook-icon,
+.social-list__instagram-icon {
+  transition: @transition;
+  margin-top: 7px;
+}
+
+.social-list__facebook-icon {
+  transition: @transition;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+
 .social-list__twitter-icon {
   transition: @transition;
+  margin-top: 6px;
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
     padding: 0;
     width: 148px;
-    margin-left: 87px;
+    margin-left: 84px;
     border-bottom: none;
   }
 }
