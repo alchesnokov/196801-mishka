@@ -2,6 +2,7 @@
   background-color: @color-white;
   min-height: 80px;
   border-bottom: 1px solid @color-border;
+  position: relative;
 }
 
 .nav-main__wrapper {
@@ -16,16 +17,55 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  //display: none;
 }
 
 .nav-main__item {
-  font-family: "OpenSansBold", sans-serif;
+  font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 24px;
   padding: 30px;
   border-top: 1px solid @color-border;
   position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .nav-main--no-js {
+    .nav-main__btn {
+      display: none;
+    }
+
+    .nav-main__list {
+      position: static;
+    }
+
+    .nav-main__logo {
+      top: 0;
+    }
+  }
+
+  .nav-main__list {
+    position: absolute;
+    background: @color-white;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-main--closed {
+    .nav-main__item {
+      display: none;
+    }
+  }
+
+  .nav-main--opened {
+    .nav-main__item:not(.nav-main__item--new, .nav-main__item--sale, .nav-main__item--delivery) {
+      display: block;
+    }
+  }
+
+  .nav-main__item--cart {
+    background-color: @color-white;
+  }
 }
 
 .nav-main__link {
@@ -35,8 +75,17 @@
   transition: @transition;
 }
 
-.nav-main__item--logo {
-  display: none;
+.nav-main__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px;
+  padding: 21px;
+  text-align: center;
+
+  .nav-main__link {
+    padding: 0;
+  }
 }
 
 .nav-main__item--new {
@@ -62,7 +111,12 @@
 
 .nav-main__btn {
   position: absolute;
+  top: 33px;
   right: 30px;
+  font-size: 0;
+  z-index: 100;
+  outline: none;
+  cursor: pointer;
 }
 
 .nav-main__btn--open {
@@ -75,7 +129,7 @@
 }
 
 .nav-main__btn--close {
-  display: none;
+  display: block;
   background-image: url("../img/icon-menu-close.svg");
   width: 21px;
   height: 20px;
@@ -117,10 +171,11 @@
     padding-left: 0;
   }
 
-  .nav-main__item--logo {
+  .nav-main__logo {
+    position: static;
     display: block;
     order: 1;
-    padding: 22px 49px;
+    padding: 22px 49px 16px;
     transition: @transition;
   }
 
@@ -162,7 +217,7 @@
     display: block;
     order: 6;
     margin-left: auto;
-    font-family: "OpenSansRegular", sans-serif;
+    font-family: "OpenSansRegular", "Arial", sans-serif;
     font-size: 15px;
     line-height: 24px;
     padding-left: 0;
@@ -185,10 +240,10 @@
     font-size: 17px;
   }
 
-  .nav-main__item--logo {
+  .nav-main__logo {
     order: 1;
     width: auto;
-    padding: 8px 24px;
+    padding: 8px 24px 3px;
   }
 
   .nav-main__img {

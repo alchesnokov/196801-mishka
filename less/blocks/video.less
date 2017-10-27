@@ -1,7 +1,7 @@
 .video {
   width: 320px;
   margin: 0 auto;
-  padding: 30px 30px 58px;
+  padding: 34px 30px 59px;
 }
 
 .video__item {
@@ -11,7 +11,7 @@
 }
 
 .video__title {
-  font-family: "OpenSansBold", sans-serif;
+  font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 24px;
   margin: 0;
@@ -19,15 +19,30 @@
   position: relative;
 }
 
+.video__camera-icon {
+  position: absolute;
+  left: 33px;
+  top: 23px;
+  fill: @color-main;
+}
+
 .video__window {
   width: 260px;
   height: 150px;
   background: url("../img/video-mobile@1x.jpg") no-repeat;
   background-size: 260px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
   }
+}
+
+.video__play-icon {
+  transition: @transition;
+  cursor: pointer;
 }
 
 .video__info {
@@ -43,18 +58,10 @@
   margin-bottom: 25px;
 }
 
-.video__title--camera {
-  background: url("../img/icon-video.svg") no-repeat 33px 24px;
-}
-
-//.video__window--play {
-//  background: url("../img/icon-play.svg") no-repeat center;
-//}
-
 @media (min-width: @tablet-width) {
   .video {
     width: @tablet-width;
-    padding: 43px 50px 79px;
+    padding: 45px 50px 79px;
   }
 
   .video__window {
@@ -75,10 +82,6 @@
     padding: 37px 0 25px 105px;
   }
 
-  .video__title--camera {
-    background-position: 41px 34px;
-  }
-
   .video__info {
     order: 3;
     padding: 8px 41px 30px 39px;
@@ -88,6 +91,11 @@
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 36px;
+  }
+
+  .video__camera-icon {
+    left: 41px;
+    top: 32px;
   }
 }
 
@@ -100,7 +108,7 @@
 
   .video__item {
     padding-left: 50px;
-    margin-left: 632px;
+    margin-left: 646px;
     transition: @transition;
   }
 
@@ -128,14 +136,15 @@
     background: url("../img/video-desktop@1x.jpg") no-repeat;
     background-size: 682px;
     position: absolute;
-    left: 0;
+    left: 50px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
     }
   }
 
-  .video__title--camera {
-    background-position: 64px 41px;
+  .video__camera-icon {
+    left: 65px;
+    top: 42px;
   }
 }

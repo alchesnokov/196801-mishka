@@ -5,6 +5,19 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 23px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+  }
 
   .btn-main {
     display: block;
@@ -14,7 +27,7 @@
 }
 
 .contacts__title {
-  font-family: "OpenSansBold", sans-serif;
+  font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: @color-black;
@@ -74,7 +87,11 @@
     width: @tablet-width;
     display: flex;
     flex-wrap: wrap;
-    padding: 46px 0 57px 0;
+    padding: 61px 0 57px 0;
+
+    &::before {
+      background-size: auto 15px;
+    }
 
     .btn-main {
       width: 231px;
@@ -147,8 +164,12 @@
 @media (min-width: @desktop-width) {
   .contacts {
     width: @desktop-width;
-    padding: 77px 50px 105px;
+    padding: 94px 50px 105px;
     flex-direction: row;
+
+    &::before {
+      background-size: auto;
+    }
 
     .btn-main {
       margin: -53px 0 0 175px;

@@ -12,21 +12,17 @@
 
   <!--Header Page-->
 <header class="header-page">
-  <nav class="nav-main">
+  <nav class="nav-main nav-main--no-js">
     <div class="nav-main__wrapper">
-      <a href="index.html" class="header-page__logo">
-        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип" class="header-page__logo-img"/>
-      </a>
-      <button class="nav-main__btn nav-main__btn--open"></button>
-      <button class="nav-main__btn nav-main__btn--close"></button>
+      <button class="nav-main__btn nav-main__btn--open">Открыть меню</button>
     </div>
     <ul class="nav-main__list">
-      <li class="nav-main__item nav-main__item--logo">
+      <li class="nav-main__logo">
         <a href="index.html" class="nav-main__link">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Логотип" class="nav-main__img"/>
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип" class="nav-main__img"/>
           </picture>
         </a>
       </li>
@@ -51,10 +47,16 @@
   <section class="categories">
     <h2 class="visually-hidden">Категории товаров</h2>
     <ul class="categories__list">
-      <li class="categories__item categories__item--interior"><a href="#" class="categories__link categories__link--interior">Предметы<br>
-        интерьера</a></li>
-      <li class="categories__item categories__item--toy"><a href="#" class="categories__link categories__link--toy">Детские<br>
-        игрушки</a></li>
+      <li class="categories__item categories__item--interior">
+        <a href="#" class="categories__link categories__link--interior">
+          <svg class="categories__interior-icon" width="40.219" height="62.411"><use xlink:href="#icon-interior"></use></svg>
+          Предметы<br> интерьера</a>
+      </li>
+      <li class="categories__item categories__item--toy">
+        <a href="#" class="categories__link categories__link--toy">
+          <svg class="categories__toy-icon" width="60" height="59.62"><use xlink:href="#icon-toy"></use></svg>
+          Детские<br> игрушки</a>
+      </li>
     </ul>
   </section>
 </header>
@@ -91,7 +93,7 @@
         <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаная корзинка" class="best-product__img"/>
       </picture>
       <div class="best-product__price">Цена: 990 руб.</div>
-      <button class="btn-main">Заказать</button>
+      <a class="btn-main" href="#">Заказать</a>
     </div>
   </section>
   <!--Best Product Section End-->
@@ -100,12 +102,30 @@
   <section class="about-us">
     <h2 class="about-us__title">Коротко о нас:</h2>
     <ul class="about-us__list">
-      <li class="about-us__item about-us__item--flower">Экологически<br> чистые материалы</li>
-      <li class="about-us__item about-us__item--money">Скандинавский стиль<br> по российской цене</li>
-      <li class="about-us__item about-us__item--heart">Увеличивает лайки<br> на фотографиях</li>
-      <li class="about-us__item about-us__item--ball">Связано вручную с<br> любовью и умилением</li>
-      <li class="about-us__item about-us__item--rocket">Поддержка отечественного<br> производителя</li>
-      <li class="about-us__item about-us__item--gift">Поставляется в<br> подарочной упаковке</li>
+      <li class="about-us__item about-us__item--flower">
+        <svg class="about-us__flower-icon" width="31.972" height="37.301"><use xlink:href="#icon-feature-flower"></use></svg>
+        Экологически<br> чистые материалы
+      </li>
+      <li class="about-us__item about-us__item--money">
+        <svg class="about-us__money-icon" width="46.575" height="27.332"><use xlink:href="#icon-feature-money"></use></svg>
+        Скандинавский стиль<br> по российской цене
+      </li>
+      <li class="about-us__item about-us__item--heart">
+        <svg class="about-us__heart-icon" width="33.05" height="27.857"><use xlink:href="#icon-feature-heart"></use></svg>
+        Увеличивает лайки<br> на фотографиях
+      </li>
+      <li class="about-us__item about-us__item--ball">
+        <svg class="about-us__ball-icon" width="34.373" height="34.373"><use xlink:href="#icon-feature-ball"></use></svg>
+        Связано вручную с<br> любовью и умилением
+      </li>
+      <li class="about-us__item about-us__item--rocket">
+        <svg class="about-us__rocket-icon" width="54.156" height="23.183"><use xlink:href="#icon-feature-rocket"></use></svg>
+        Поддержка отечественного<br> производителя
+      </li>
+      <li class="about-us__item about-us__item--gift">
+        <svg class="about-us__gift-icon" width="32.666" height="32.486"><use xlink:href="#icon-feature-gift"></use></svg>
+        Поставляется в<br> подарочной упаковке
+      </li>
     </ul>
   </section>
   <!--About Us Section End-->
@@ -114,7 +134,7 @@
   <section class="reviews reviews--bg">
     <div class="slider">
       <h2 class="reviews__title">Отзывы</h2>
-      <button class="btn-main">Написать</button>
+      <a class="btn-main" href="#">Написать</a>
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
@@ -157,7 +177,7 @@
     <div class="contacts__map">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A94dc61cd7790d495e40dfa41c3e87690338c05e68be508466dd981a0fac9d1fe&amp;source=constructor" width="320" height="457"></iframe>
     </div>
-    <button class="btn-main">Напишите нам</button>
+    <a class="btn-main" href="#">Напишите нам</a>
   </section>
   <!--Contacts Section End-->
 
@@ -171,24 +191,24 @@
   </a>
   <ul class="footer-page__social social-list">
     <li class="social-list__item">
-      <a href="#" class="social-list__link">
+      <a href="#" class="social-list__link">Мы в Instagram
         <svg class="social-list__instagram-icon" width="21.769" height="21.334"><use xlink:href="#icon-insta"></use></svg>
       </a>
     </li>
     <li class="social-list__item">
-      <a href="#" class="social-list__link">
+      <a href="#" class="social-list__link">Мы в Facebook
         <svg class="social-list__facebook-icon" width="14.962" height="27.718"><use xlink:href="#icon-fb"></use></svg>
       </a>
     </li>
     <li class="social-list__item">
-      <a href="#" class="social-list__link">
+      <a href="#" class="social-list__link">Мы в Twitter
         <svg class="social-list__twitter-icon" width="23.494" height="20.168"><use xlink:href="#icon-twitter"></use></svg>
       </a>
     </li>
   </ul>
   <div class="footer-page__copyright copyright">
     <p class="copyright__text">Разработано</p>
-    <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="copyright__logo">
+    <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="copyright__logo">Сайт продвинутого интенсива html academy
       <svg class="copyright__logo-img" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
     </a>
   </div>
@@ -210,6 +230,8 @@
   <button class="btn-main btn-main--add">Добавить</button>
 </div>
 <!--Modal End-->
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
