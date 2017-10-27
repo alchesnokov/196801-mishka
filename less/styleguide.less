@@ -79,12 +79,19 @@
 .order__radio + .order__label:hover::before,
 .order__checkbox + .order__label:hover::before,
 .order__input:hover,
+.order__input:hover + .order__phone-icon,
+.order__input:hover + .order__mail-icon,
 .order__textarea:hover,
 .order__input:active,
+.order__input:active + .order__phone-icon,
+.order__input:active + .order__mail-icon,
 .order__textarea:active,
 .order__input:focus,
+.order__input:focus + .order__phone-icon,
+.order__input:focus + .order__mail-icon,
 .order__textarea:focus {
   border-color: @color-main;
+  fill: @color-main;
 }
 
 .order__radio + .order__label:active::before,

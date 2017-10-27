@@ -10,7 +10,7 @@
   font-size: 19px;
   line-height: 18px;
   color: @color-black;
-  margin: 0 0 3px 0;
+  margin: 0;
   transition: @transition;
 }
 
@@ -22,10 +22,22 @@
 
 .copyright__logo-img {
   margin-top: 8px;
+  margin-right: 1px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__logo-img {
+    margin-top: 5px;
+    margin-right: 1px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .copyright__text {
     margin: 0 0 5px -1px;
+  }
+
+  .copyright__logo-img {
+    margin-top: 2px;
   }
 }

@@ -58,6 +58,23 @@
 .order__item--email {
   padding-top: 7px;
   padding-bottom: 32px;
+  position: relative;
+}
+
+.order__phone-icon {
+  position: absolute;
+  top: 34px;
+  right: 8px;;
+  fill: @color-placeholder;
+  transition: @transition;
+}
+
+.order__mail-icon {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+  fill: @color-placeholder;
+  transition: @transition;
 }
 
 .order__item--textarea {
@@ -71,6 +88,7 @@
   line-height: 16px;
   color: @color-main;
   text-transform: uppercase;
+  padding-right: 18px;
 }
 
 .order__label {
@@ -280,6 +298,11 @@
     }
   }
 
+  .order__phone-icon {
+    top: 62px;
+    right: 26px;
+  }
+
   .order__item--email {
     padding-top: 13px;
     padding-bottom: 49px;
@@ -312,6 +335,11 @@
       height: 100%;
       background-color: @color-bg-secondary;
     }
+  }
+
+  .order__mail-icon {
+    top: 34px;
+    right: 22px;
   }
 
   .order__item--textarea {
