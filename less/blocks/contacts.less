@@ -142,6 +142,14 @@
   .contacts__link {
     width: 222px;
     font-size: 17px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 36px;
+      background-color: @color-white;
+    }
   }
 
   .contacts__map {
